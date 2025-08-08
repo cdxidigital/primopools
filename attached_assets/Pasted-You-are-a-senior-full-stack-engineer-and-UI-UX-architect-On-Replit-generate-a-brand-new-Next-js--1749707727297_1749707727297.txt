@@ -1,0 +1,47 @@
+You are a senior full-stack engineer and UI/UX architect. On Replit, generate a brand-new Next.js + TypeScript + Tailwind CSS project called “primo-pools”. Integrate the following requirements:
+
+1. 🏷️ **Company Data** (exact values sourced online – do not stub):
+   - ABN: 82 703 745 225 :contentReference[oaicite:0]{index=0}  
+   - Address: 35 Mannion Way, Kardinya WA 6163 :contentReference[oaicite:1]{index=1}  
+   - Phone: (08) 9331 8998 | Mobile: 0488 040 150 :contentReference[oaicite:2]{index=2}  
+   - Email: hello@primopools.com.au  
+   - Website: primopools.com.au  
+
+2. 🎨 **Visual Design**:
+   - Colour palette: Turquoise (#1BC1C6), Deep‐Sea Blue (#003045), Quartz White (#F9FAFC)
+   - Hero: full-bleed 4K water-ripple loop (mute + autoplay), overlaid headline “Concrete Elegance, Crafted in Perth.”
+   - Glass-morphism cards, subtle parallax, Ken-Burns hover on hi-res pool imagery (import 30+ from Unsplash: “luxury pool”, “Perth backyard”).
+   - Typography: Cabinet Grotesk (bold) for headings; Inter (regular) for body.
+
+3. 📐 **Layout & Pages**:
+   - **Home**: Cinematic hero video → marquee of featured pools → sticky “Request a Quote” CTA.
+   - **Our Story**: Full-screen timeline with quality-first mission, team photos.
+   - **Portfolio**: Masonry gallery → lightbox detail modals → before/after slider component.
+   - **Process**: Animated 5-step infographic (Consult → Design → Engineering → Build → Handover) via Framer Motion.
+   - **Services**: Tabs for New Builds, Renovations, Water Features, Landscaping, Maintenance.
+   - **Testimonials**: Carousel of Google reviews with client headshots.
+   - **Blog & FAQ**: MDX-driven CMS for content on WA pool regs, financing, maintenance.
+   - **Contact**: Split screen with embedded Google Map + smart form (name, suburb, type, budget slider) + click-to-call on mobile.
+
+4. 📋 **Tech & Integrations**:
+   - **CMS**: Use Markdown/MDX files or integrate a headless CMS (e.g., Contentful) for Portfolio & Blog.
+   - **Forms**: EmailJS or Mailgun integration; validate client-side and serverless endpoint in `/api/contact`.
+   - **Maps**: Embed Google Maps iframe centered on Kardinya WA.
+   - **SEO/Performance**:  
+     • Next/Image for optimized asset loading  
+     • Meta tags & OG tags (use portfolio hero as OG:image 1200×630)  
+     • Lazy-load gallery photos under 350 kB  
+     • Preconnect to Google Fonts  
+
+5. 🔧 **UX Enhancements**:
+   - Hover-lift cards (shadow 4 px → 12 px), button ripple on click.
+   - Exit-intent modal at 70% scroll offering free “Pool Planning Checklist” PDF download.
+   - Mobile bottom bar: WhatsApp quick-dial + “Get Quote” sticky button.
+
+6. 🚀 **Project Bootstrapping**:
+   - Initialize Git repo, install dependencies (`next`, `react`, `tailwindcss`, `framer-motion`, `emailjs-com`).
+   - Create `components/`, `pages/`, `public/media/` folders.
+   - Scaffold sample MDX files for 5 projects & 3 blog posts.
+   - Configure `next.config.js` for external image domains (Unsplash) and environment variables (EmailJS keys).
+
+Return a runnable Replit project with all code organized, clear README with setup & deployment steps (including custom domain setup), and sample environment file. Keep code modular, documented, and ready for a designer to swap in real photos and copy. Let’s dive in—no chlorine needed! 🏊‍♂️

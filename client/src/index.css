@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 20%, 98%);
+  --foreground: hsl(201, 100%, 13%);
+  --muted: hsl(201, 5%, 95%);
+  --muted-foreground: hsl(201, 5%, 45%);
+  --popover: hsl(210, 20%, 98%);
+  --popover-foreground: hsl(201, 100%, 13%);
+  --card: hsl(210, 20%, 98%);
+  --card-foreground: hsl(201, 100%, 13%);
+  --border: hsl(201, 5%, 90%);
+  --input: hsl(201, 5%, 90%);
+  --primary: hsl(180, 82%, 44%);
+  --primary-foreground: hsl(210, 20%, 98%);
+  --secondary: hsl(201, 5%, 95%);
+  --secondary-foreground: hsl(201, 100%, 13%);
+  --accent: hsl(201, 5%, 95%);
+  --accent-foreground: hsl(201, 100%, 13%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --ring: hsl(201, 100%, 13%);
+  --radius: 0.5rem;
+  
+  /* Primo Pools Custom Colors */
+  --turquoise: hsl(181, 82%, 44%);
+  --deep-blue: hsl(201, 100%, 13%);
+  --quartz-white: hsl(210, 20%, 98%);
+}
+
+.dark {
+  --background: hsl(201, 100%, 13%);
+  --foreground: hsl(210, 20%, 98%);
+  --muted: hsl(201, 15%, 20%);
+  --muted-foreground: hsl(201, 5%, 65%);
+  --popover: hsl(201, 100%, 13%);
+  --popover-foreground: hsl(210, 20%, 98%);
+  --card: hsl(201, 100%, 13%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --border: hsl(201, 15%, 20%);
+  --input: hsl(201, 15%, 20%);
+  --primary: hsl(180, 82%, 44%);
+  --primary-foreground: hsl(201, 100%, 13%);
+  --secondary: hsl(201, 15%, 20%);
+  --secondary-foreground: hsl(210, 20%, 98%);
+  --accent: hsl(201, 15%, 20%);
+  --accent-foreground: hsl(210, 20%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --ring: hsl(201, 15%, 83%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-cabinet {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-turquoise {
+    color: #1BC1C6;
+  }
+  
+  .text-deep-blue {
+    color: #003045;
+  }
+  
+  .text-quartz-white {
+    color: #F9FAFC;
+  }
+  
+  .bg-turquoise {
+    background-color: #1BC1C6;
+  }
+  
+  .bg-deep-blue {
+    background-color: #003045;
+  }
+  
+  .bg-quartz-white {
+    background-color: #F9FAFC;
+  }
+  
+  .border-turquoise {
+    border-color: #1BC1C6;
+  }
+  
+  .glass-morphism {
+    background: rgba(249, 250, 252, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .ken-burns-hover:hover img {
+    animation: ken-burns 8s ease-out forwards;
+  }
+  
+  .video-overlay {
+    background: linear-gradient(45deg, rgba(0, 48, 69, 0.3), rgba(27, 193, 198, 0.2));
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(27, 193, 198, 0.25);
+  }
+  
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple-effect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .ripple-effect:active::after {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(249, 250, 252, 0.1);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(27, 193, 198, 0.5);
+    border-radius: 4px;
+  }
+  
+  .masonry {
+    column-count: 3;
+    column-gap: 1.5rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+  
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px);
+  }
+  50% { 
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes ken-burns {
+  0% { 
+    transform: scale(1);
+  }
+  100% { 
+    transform: scale(1.1);
+  }
+}
+
+@keyframes ripple {
+  0% { 
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% { 
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(27, 193, 198, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(27, 193, 198, 0.6);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-ken-burns {
+  animation: ken-burns 20s linear infinite;
+}
+
+.animate-ripple {
+  animation: ripple 0.6s ease-out;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
